@@ -26,5 +26,12 @@
     "javascript"
   ],
   "author": "Miguel Hernández <miguelhernandezk@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.1",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1"
+  }
 }
