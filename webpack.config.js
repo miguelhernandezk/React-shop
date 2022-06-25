@@ -7,7 +7,8 @@ module.exports ={
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: "/"
     },
     resolve: {
         extensions: [".js", ".jsx"],
@@ -27,7 +28,7 @@ module.exports ={
                 use: "html-loader",
             },
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.(css|scss)$/,
                 use: [
                     "style-loader",
                     "css-loader",
@@ -46,7 +47,8 @@ module.exports ={
         }),
     ],
     devServer: {
-        static: path.join(__dirname, "dist"),
-        port: 3005,
+        historyApiFallback: true,
+        //static: path.join(__dirname, "dist"),
+        //port: 3005,
     }
 }
